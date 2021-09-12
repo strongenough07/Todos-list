@@ -1,17 +1,20 @@
 <template>
-  <div class="flex flex-cols justify-center items-center">
-    <img class="bg-gray-500" alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="flex flex-col justify-center items-center">
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <h1 class="text-6xl bold mb-10">Todos</h1>
+    <TodosList />
+    <TodoForm />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import TodosList from "./components/TodosList.vue";
+import TodoForm from "./components/TodoForm.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    TodosList,
+    TodoForm,
   },
 };
 </script>
