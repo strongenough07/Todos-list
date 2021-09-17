@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col justify-center">
     <Todo
       v-for="(todo, index) in $store.state.todos"
       :key="index"
@@ -9,15 +9,16 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import Todo from "./Todo.vue";
 export default {
   components: {
     Todo,
   },
   computed: {
-    todos() {
-      return this.$store.state.todos;
-    },
+    ...mapState({
+      todos: "todos",
+    }),
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-10">
     <input
       class="
         focus:ring focus:border-blue-400
@@ -29,6 +29,7 @@
         py-2
         px-4
         rounded-full
+        mt-4
       "
     >
       Submit
@@ -46,6 +47,7 @@ export default {
   methods: {
     addNewTodoItem() {
       this.$store.dispatch("addNewTodo", this.newTodoItem);
+      this.newTodoItem = "";
     },
   },
 };
