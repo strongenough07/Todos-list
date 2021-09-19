@@ -20,6 +20,7 @@
       v-model="newTodoItem"
     />
     <button
+      :disabled="!newTodoItem.length"
       @click="addNewTodoItem()"
       class="
         bg-green-500
